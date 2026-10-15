@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hiking Participant Registration Form | ARGA ADVENTURE</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#17332A; --forest-2:#24493C; --lake:#1F6F82; --mist:#EEF3F0; --line:#CFDAD4;
+    --ink:#16221C; --muted:#5B6B63; --dawn:#F0A63A; --danger:#B3261E; --ok:#9FD3B4;
+  }
+  *{box-sizing:border-box}
+  [hidden]{display:none !important}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0;font-family:'Ubuntu',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);background:var(--mist);line-height:1.5}
+
+  .top{background:var(--forest);color:#fff;position:relative;overflow:hidden;padding:22px 20px 18px}
+  .mtn{position:absolute;left:0;right:0;bottom:0;background-repeat:repeat-x;pointer-events:none}
+  .mtn-back{height:150px;background-size:auto 150px;background-position:center bottom;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 150'%3E%3Cpath fill='%2321443A' d='M0 150V100L60 60L110 95L180 30L250 90L320 55L390 100L450 45L520 95L570 70L600 100V150Z'/%3E%3C/svg%3E")}
+  .mtn-front{height:90px;background-size:auto 90px;background-position:-120px bottom;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 110'%3E%3Cpath fill='%230F241D' d='M0 110V80L70 50L130 82L210 38L290 85L360 60L440 90L520 48L580 78L600 80V110Z'/%3E%3C/svg%3E")}
+  .top-in{position:relative;max-width:560px;margin:0 auto}
+  .brandrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
+  .brand-left{display:flex;align-items:center;gap:4px}
+  .logo-badge{display:grid;place-items:center;flex:none;width:40px;height:52px}
+  .logo-badge img{display:block;max-width:100%;max-height:100%;object-fit:contain}
+  .brand{font-weight:400;letter-spacing:.02em}
+  
+  .btn-home{display:inline-flex;align-items:center;gap:6px;padding:8px 14px;background:rgba(255,255,255,0.12);color:#fff;border:1px solid rgba(255,255,255,0.25);border-radius:8px;font-size:0.85rem;font-weight:500;text-decoration:none;transition:background 0.2s,transform 0.2s ease,box-shadow 0.2s ease}
+  .btn-home:hover{background:rgba(255,255,255,0.22);transform:translateY(-4px);box-shadow:0 8px 16px rgba(0,0,0,0.35)}
+  .btn-home:active{transform:translateY(-1px);box-shadow:0 3px 8px rgba(0,0,0,0.3)}
+
+  h1{margin:14px 0 0;font-size:clamp(1.35rem,5.5vw,1.8rem);line-height:1.2;font-weight:500}
+  .steps{list-style:none;margin:20px 0 0;padding:0;display:flex;gap:6px}
+  .steps li{flex:1;font-size:.8rem;color:rgba(255,255,255,.7);border-top:3px solid rgba(255,255,255,.25);padding-top:6px}
+  .steps li.done{color:#fff;border-color:var(--ok)}
+  .steps li[aria-current="step"]{color:#fff;border-color:var(--dawn);font-weight:500}
+
+  /* Efek zoom-in saat halaman dibuka (sama seperti hero halaman index), berurutan: logo > nama > Beranda > judul > tahapan */
+  .hero-zoom{transform-origin:center;animation:heroZoomIn 1s ease-out backwards}
+  .brandrow .logo-badge.hero-zoom{animation-delay:.2s}
+  .brandrow .brand.hero-zoom{animation-delay:.35s}
+  .brandrow .btn-home.hero-zoom{animation-delay:.5s}
+  h1.hero-zoom{animation-delay:.6s}
+  .steps li.hero-zoom:nth-child(1){animation-delay:.7s}
+  .steps li.hero-zoom:nth-child(2){animation-delay:.82s}
+  .steps li.hero-zoom:nth-child(3){animation-delay:.94s}
+  .steps li.hero-zoom:nth-child(4){animation-delay:1.06s}
+  @keyframes heroZoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}100%{opacity:1;transform:scale3d(1,1,1)}}
+
+  main{max-width:560px;margin:0 auto;padding:20px 16px 48px}
+  .panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:22px 18px}
+  .panel.enter{animation:enter .22s ease-out}
+  @keyframes enter{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  h2{margin:0 0 4px;font-size:1.3rem}
+  .lead{margin:0 0 20px;color:var(--muted)}
+
+  .field{margin:0 0 16px}
+  label,.lbl{display:block;margin-bottom:6px;font-weight:500}
+  input,select{width:100%;min-height:48px;padding:11px 12px;font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px}
+  input:focus-visible,select:focus-visible,button:focus-visible,.file:focus-within{outline:3px solid rgba(31,111,130,.35);outline-offset:1px;border-color:var(--lake)}
+  input[readonly]{background:var(--mist);color:var(--forest);font-weight:500}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .unit{position:relative}
+  .unit input{padding-right:54px}
+  .unit span{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted);pointer-events:none}
+  .hint{margin:6px 0 0;font-size:.85rem;color:var(--muted)}
+  .readout{margin:6px 0 0;font-size:.9rem;color:var(--forest);font-weight:500}
+  .readout:empty{display:none}
+  .trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  .phone{display:flex;gap:8px;align-items:stretch}
+  .phone > input{flex:1;min-width:0}
+  .cc{position:relative;flex:none}
+  .cc-btn{display:flex;align-items:center;gap:6px;height:100%;min-height:48px;padding:0 8px 0 10px;background:#fff;color:var(--ink);font-weight:500;border:1.5px solid var(--line);border-radius:10px}
+  .cc-btn svg{flex:none;color:var(--muted)}
+  .flag{flex:none;width:20px;height:15px;object-fit:cover;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)}
+  .cc-pop{position:absolute;z-index:20;top:calc(100% + 6px);left:0;width:min(320px,calc(100vw - 72px));padding:8px;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 30px rgba(22,34,28,.18)}
+  .cc-search{min-height:42px;margin-bottom:6px;padding:8px 10px}
+  .cc-list{list-style:none;margin:0;padding:0;max-height:240px;overflow:auto}
+  .cc-list li{display:flex;align-items:center;gap:10px;padding:9px 8px;border-radius:8px;cursor:pointer}
+  .cc-list li[aria-selected="true"]{background:var(--mist);font-weight:500}
+  .cc-list li.active{background:#DCE9E3}
+  .cc-list .nm{flex:1;min-width:0}
+  .cc-list .dc{color:var(--muted)}
+  .cc-empty{padding:10px 8px;color:var(--muted)}
+
+  .file{position:relative;display:flex;gap:12px;align-items:center;padding:12px;border:1.5px dashed #9FB3A8;border-radius:10px;background:#FAFCFB;cursor:pointer;margin:0}
+  .file input{position:absolute;left:0;top:0;width:1px;height:1px;min-height:0;opacity:0;padding:0;border:0}
+  .thumb{flex:none;width:56px;height:56px;border-radius:8px;background:var(--mist) center/cover no-repeat;display:grid;place-items:center;color:var(--muted);font-size:.75rem}
+  .meta{min-width:0;flex:1;display:block}
+  .name{display:block;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .meta .hint{display:block;margin:2px 0 0}
+  .file.bad{border-color:var(--danger)}
+
+  .actions{display:flex;gap:10px;margin-top:22px}
+  button{min-height:50px;padding:0 18px;font:inherit;font-weight:500;border:0;border-radius:12px;cursor:pointer}
+  .btn-main{flex:1;background:var(--forest);color:#fff}
+  .btn-main:hover{background:var(--forest-2)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+  .btn-ghost:hover{background:#f4f7f5}
+  button[disabled]{opacity:.6;cursor:progress}
+  .err{margin-top:16px;padding:10px 12px;background:#FDECEA;color:var(--danger);border:1px solid #F3B8B3;border-radius:10px}
+
+  .qris{display:block;width:min(100%,340px);height:auto;margin:0 auto;padding:10px;background:#fff;border:1px solid var(--line);border-radius:12px}
+  .dl{display:block;margin:12px auto 0;text-align:center;color:var(--lake);font-weight:500}
+
+  .done-box{text-align:center;padding:10px 0}
+  .done-box p{margin:0 0 14px;font-size:1.05rem}
+  .rid{margin:20px 0 !important;padding:10px 12px;background:var(--mist);border-radius:10px;font-size:.95rem !important;color:var(--forest)}
+  .done-actions{display:flex;gap:10px;margin-top:24px}
+  .done-actions a{flex:1;display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
+
+  @media (prefers-reduced-motion:reduce){.panel.enter,.hero-zoom{animation:none}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="mtn mtn-back" aria-hidden="true"></div>
+  <div class="mtn mtn-front" aria-hidden="true"></div>
+  <div class="top-in">
+    <div class="brandrow">
+      <div class="brand-left">
+        <span class="logo-badge hero-zoom"><img src="../images/logoargawhite.png" alt="ARGA ADVENTURE" width="40" height="40"></span>
+        <span class="brand hero-zoom">ARGA ADVENTURE</span>
+      </div>
+      <a href="index.html" class="btn-home hero-zoom" id="headerHomeBtn">Home</a>
+    </div>
+    <h1 class="hero-zoom">Hiking Participant Registration Form</h1>
+    <ol class="steps" id="stepper">
+      <li class="hero-zoom" aria-current="step">Participant details</li>
+      <li class="hero-zoom">Payment</li>
+      <li class="hero-zoom">Proof of payment</li>
+      <li class="hero-zoom">Done</li>
+    </ol>
+  </div>
+</header>
+
+<main>
+
+  <!-- HALAMAN 1 -->
+  <section class="panel enter" data-step="1">
+    <h2>Participant details</h2>
+    <p class="lead">Please fill in your details accurately, exactly as shown on your passport.</p>
+
+    <form id="f1" novalidate autocomplete="on">
+      <!-- 1. TUJUAN TRIP -->
+      <div class="field">
+        <label for="tujuanSel">Trip destination</label>
+        <input type="text" id="tujuan" name="tujuan" readonly hidden>
+        <select id="tujuanSel" name="tujuanSel" required>
+          <option value="">Select destination</option>
+        </select>
+      </div>
+
+      <!-- 2. MEETING POINT -->
+      <div class="field">
+        <label for="meeting">Meeting point</label>
+        <select id="meeting" name="meeting" required>
+          <option value="">Select a trip destination first</option>
+        </select>
+      </div>
+
+      <!-- 3. TANGGAL TRIP -->
+      <div class="field">
+        <label for="tanggal">Trip date</label>
+        <input type="date" id="tanggal" name="tanggal" required>
+        <p class="readout" id="tanggalOut" aria-live="polite"></p>
+      </div>
+
+      <!-- 4. PAKET TRIP (DINAMIS) -->
+      <div class="field">
+        <label for="paket">Trip package</label>
+        <select id="paket" name="paket" required>
+          <option value="">Select a trip destination first</option>
+        </select>
+      </div>
+
+      <!-- 5. TN IDENTITAS -->
+      <div class="field">
+        <label for="tnStatus">TN Identity</label>
+        <select id="tnStatus" name="tnStatus" required>
+          <option value="">Select</option>
+          <option value="Sudah ada">Yes, I already have one</option>
+          <option value="Tidak ada">No, I do not have one</option>
+        </select>
+      </div>
+
+      <div class="field" id="tnIdBox" hidden>
+        <label for="tnId">TN ID</label>
+        <input type="text" id="tnId" name="tnId" maxlength="30" autocomplete="off" placeholder="Enter your TN ID">
+      </div>
+
+      <div class="field" id="emailBox" hidden>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" maxlength="100" inputmode="email" autocomplete="email" placeholder="name@email.com">
+        <p class="hint">Use a valid and active email address.</p>
+      </div>
+
+      <!-- 6. NAMA PESERTA -->
+      <div class="field">
+        <label for="nama">Participant name</label>
+        <input type="text" id="nama" name="nama" required minlength="2" maxlength="80" autocomplete="name" placeholder="As shown on passport">
+      </div>
+
+      <!-- 7. TINGGI & BERAT BADAN -->
+      <div class="row2">
+        <div class="field">
+          <label for="tb">Height</label>
+          <div class="unit"><input type="number" id="tb" name="tb" required min="100" max="230" step="0.1" inputmode="decimal"><span>cm</span></div>
+        </div>
+        <div class="field">
+          <label for="bb">Weight</label>
+          <div class="unit"><input type="number" id="bb" name="bb" required min="30" max="200" step="0.1" inputmode="decimal"><span>kg</span></div>
+        </div>
+      </div>
+
+      <!-- 8. NO. TELP / WA PESERTA -->
+      <div class="field">
+        <label for="wa">Participant phone / WhatsApp number</label>
+        <div class="phone">
+          <div class="cc" id="waCc"></div>
+          <input type="tel" id="wa" name="wa" required inputmode="tel" autocomplete="tel-national" maxlength="20" placeholder="412 345 678">
+        </div>
+        <p class="hint" id="waOut" aria-live="polite">No need to enter the leading 0.</p>
+      </div>
+
+      <!-- 9. UPLOAD KTP -->
+      <div class="field">
+        <span class="lbl" id="ktpLbl">Upload participant's passport</span>
+        <label class="file" for="ktp" aria-labelledby="ktpLbl">
+          <input type="file" id="ktp" accept="image/*,application/pdf" required>
+          <span class="thumb" id="ktpThumb">Passport</span>
+          <span class="meta"><span class="name" id="ktpName">Choose a photo or PDF</span><span class="hint" id="ktpHint">JPG, PNG, or PDF</span></span>
+        </label>
+      </div>
+
+      <!-- 10. KONTAK DARURAT -->
+      <div class="field">
+        <label for="darurat">Emergency contact name</label>
+        <input type="text" id="darurat" name="darurat" required minlength="2" maxlength="80" autocomplete="off">
+      </div>
+
+      <div class="field">
+        <label for="daruratWa">Emergency contact phone number</label>
+        <div class="phone">
+          <div class="cc" id="daruratCc"></div>
+          <input type="tel" id="daruratWa" name="daruratWa" required inputmode="tel" autocomplete="off" maxlength="20" placeholder="412 345 678">
+        </div>
+        <p class="hint" id="daruratOut" aria-live="polite">No need to enter the leading 0.</p>
+      </div>
+
+      <div class="trap" aria-hidden="true"><label>Website<input type="text" id="website" tabindex="-1" autocomplete="off"></label></div>
+
+      <div class="actions"><button type="button" class="btn-main" id="next1">Continue to payment</button></div>
+    </form>
+  </section>
+
+  <!-- HALAMAN 2 -->
+  <section class="panel" data-step="2" hidden>
+    <h2>Pay with QRIS</h2>
+    <p class="lead">Scan the QRIS code below using your banking or e-wallet app, then save your proof of payment.</p>
+    <img class="qris" src="../images/argaqris.png" alt="QRIS ARGA ADVENTURE">
+    <a class="dl" href="../images/argaqris.png" download="QRIS-ARGA-ADVENTURE.png">Save QRIS image</a>
+    <div class="actions">
+      <button type="button" class="btn-ghost" data-back="1">Back</button>
+      <button type="button" class="btn-main" id="next2">Continue to upload proof of payment</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 3 -->
+  <section class="panel" data-step="3" hidden>
+    <h2>Upload proof of payment</h2>
+    <p class="lead">Upload a screenshot or photo of your successful payment confirmation.</p>
+    <div class="field">
+      <span class="lbl" id="buktiLbl">Proof of payment</span>
+      <label class="file" for="bukti" aria-labelledby="buktiLbl">
+        <input type="file" id="bukti" accept="image/*,application/pdf">
+        <span class="thumb" id="buktiThumb">Proof</span>
+        <span class="meta"><span class="name" id="buktiName">Choose a photo or PDF</span><span class="hint" id="buktiHint">JPG, PNG, or PDF</span></span>
+      </label>
+    </div>
+    <div class="err" id="err" role="alert" hidden></div>
+    <div class="actions">
+      <button type="button" class="btn-ghost" data-back="2" id="back3">Back</button>
+      <button type="button" class="btn-main" id="submit">Register for the Hike</button>
+    </div>
+  </section>
+
+  <!-- HALAMAN 4 -->
+  <section class="panel" data-step="4" hidden>
+    <div class="done-box">
+      <p><strong>Thank you for trusting ARGA ADVENTURE with your adventure! 🎉</strong></p>
+      <p>We will process your registration shortly. Further information will be sent to you via WhatsApp 😊</p>
+      <p>See you on an exciting adventure with ARGA ADVENTURE! 🎒⛰️</p>
+      <p class="rid">Participant ID: <strong id="rid"></strong></p>
+      
+      <div class="done-actions">
+        <a href="registration.html" class="btn-ghost">Add participant</a>
+        <a href="index.html" class="btn-main">Home</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script>
+(function () {
+  var API_URL = 'https://script.google.com/macros/s/AKfycbwGkz_o2LFGwNsud4lS-eQRhJ-0ljwx9iciXE0mpi9GvQe1uIP4hkFCF_b4FxvlwxWoSg/exec';
+
+  // Daftar Tujuan Trip sesuai urutan persis
+  var DEST_LIST = [
+    'Arjuno',
+    'Lawu',
+    'Merbabu',
+    'Prau',
+    'Ranu Kumbolo',
+    'Sindoro',
+    'Slamet',
+    'Sumbing',
+    'Annapurna Base Camp',
+    'Everest Base Camp'
+  ];
+
+  // Mapping Meeting Point
+  var TRIP_MEETING_POINTS = {
+    'Arjuno': ['Basecamp', 'Surabaya'],
+    'Lawu': ['Basecamp', 'Solo', 'Jakarta'],
+    'Merbabu': ['Basecamp', 'Semarang', 'Yogyakarta', 'Jakarta'],
+    'Prau': ['Basecamp', 'Wonosobo', 'Semarang', 'Yogyakarta', 'Jakarta'],
+    'Ranu Kumbolo': ['Basecamp', 'Malang'],
+    'Sindoro': ['Basecamp', 'Semarang', 'Yogyakarta', 'Jakarta'],
+    'Slamet': ['Basecamp', 'Semarang', 'Yogyakarta', 'Jakarta'],
+    'Sumbing': ['Basecamp', 'Semarang', 'Yogyakarta', 'Jakarta'],
+    'Annapurna Base Camp': ['Kathmandu'],
+    'Everest Base Camp': ['Kathmandu']
+  };
+
+  // Mapping Paket Trip berdasarkan aturan
+  function getPackagesForTrip(trip) {
+    if (trip === 'Annapurna Base Camp' || trip === 'Everest Base Camp') {
+      return ['Exclusive Trip'];
+    } else if (trip === 'Ranu Kumbolo') {
+      return ['Open Trip', 'Private Economy', 'Private Business', 'Private VIP'];
+    } else if (trip) {
+      return ['Private Economy', 'Private Business', 'Private VIP'];
+    }
+    return [];
+  }
+
+  var COUNTRIES = [
+    ['Australia', 'AU', '61'], ['Indonesia', 'ID', '62'], ['Malaysia', 'MY', '60'], ['Singapore', 'SG', '65'], ['Brunei', 'BN', '673'], ['Timor-Leste', 'TL', '670'],
+    ['South Africa', 'ZA', '27'], ['United States', 'US', '1'], ['Saudi Arabia', 'SA', '966'],
+    ['Bangladesh', 'BD', '880'], ['Netherlands', 'NL', '31'], ['Brazil', 'BR', '55'], ['Philippines', 'PH', '63'], ['Hong Kong', 'HK', '852'],
+    ['India', 'IN', '91'], ['United Kingdom', 'GB', '44'], ['Italy', 'IT', '39'], ['Japan', 'JP', '81'], ['Germany', 'DE', '49'],
+    ['Cambodia', 'KH', '855'], ['Canada', 'CA', '1'], ['Korea Selatan', 'KR', '82'], ['Kuwait', 'KW', '965'], ['Laos', 'LA', '856'],
+    ['Egypt', 'EG', '20'], ['Myanmar', 'MM', '95'], ['Nepal', 'NP', '977'], ['Pakistan', 'PK', '92'], ['France', 'FR', '33'],
+    ['Qatar', 'QA', '974'], ['New Zealand', 'NZ', '64'], ['Spain', 'ES', '34'], ['Sri Lanka', 'LK', '94'], ['Switzerland', 'CH', '41'],
+    ['Taiwan', 'TW', '886'], ['Thailand', 'TH', '66'], ['China', 'CN', '86'], ['Turkey', 'TR', '90'],
+    ['United Arab Emirates', 'AE', '971'], ['Vietnam', 'VN', '84']
+  ];
+
+  var $ = function (s) { return document.querySelector(s); };
+  var panels = Array.prototype.slice.call(document.querySelectorAll('[data-step]'));
+  var stepItems = Array.prototype.slice.call(document.querySelectorAll('#stepper li'));
+  var MAX_IMG = 15 * 1024 * 1024, MAX_PDF = 4 * 1024 * 1024;
+
+  function go(n) {
+    panels.forEach(function (p) {
+      var on = Number(p.dataset.step) === n;
+      p.hidden = !on;
+      p.classList.toggle('enter', on);
+    });
+    stepItems.forEach(function (li, i) {
+      li.classList.toggle('done', i + 1 < n || n === 4);
+      if (i + 1 === n && n !== 4) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
+    });
+    $('#headerHomeBtn').hidden = (n === 4);
+    window.scrollTo(0, 0);
+  }
+
+  function cleanDest(s) {
+    return String(s || '').replace(/[^\p{L}\p{N} .'\-]/gu, '').replace(/\s+/g, ' ').trim().slice(0, 60);
+  }
+
+  var params = new URLSearchParams(location.search);
+  var urlDest = cleanDest(params.get('tujuan') || params.get('destinasi'));
+  
+  // Cari match case-insensitive
+  var matchedDest = '';
+  if (urlDest) {
+    for (var i = 0; i < DEST_LIST.length; i++) {
+      if (DEST_LIST[i].toLowerCase() === urlDest.toLowerCase()) {
+        matchedDest = DEST_LIST[i];
+        break;
+      }
+    }
+  }
+
+  var destFixed = $('#tujuan'), destSel = $('#tujuanSel'), meetingSel = $('#meeting'), paketSel = $('#paket');
+
+  // Populate Dropdown Tujuan
+  destSel.innerHTML = '<option value="">Select destination</option>';
+  DEST_LIST.forEach(function (d) {
+    var o = document.createElement('option');
+    o.value = d;
+    o.textContent = d;
+    destSel.appendChild(o);
+  });
+
+  function updateDynamicFields(selectedTrip) {
+    // Update Meeting Point
+    meetingSel.innerHTML = '<option value="">Select meeting point</option>';
+    var points = TRIP_MEETING_POINTS[selectedTrip] || [];
+    points.forEach(function (pt) {
+      var opt = document.createElement('option');
+      opt.value = pt;
+      opt.textContent = pt;
+      meetingSel.appendChild(opt);
+    });
+
+    // Update Paket Trip
+    paketSel.innerHTML = '<option value="">Select package</option>';
+    var pkgs = getPackagesForTrip(selectedTrip);
+    pkgs.forEach(function (pk) {
+      var opt = document.createElement('option');
+      opt.value = pk;
+      opt.textContent = pk;
+      paketSel.appendChild(opt);
+    });
+  }
+
+  if (matchedDest) {
+    destFixed.value = matchedDest;
+    destFixed.hidden = false;
+    destSel.hidden = true;
+    destSel.required = false;
+    updateDynamicFields(matchedDest);
+  } else {
+    destSel.hidden = false;
+    destSel.required = true;
+    destSel.addEventListener('change', function () {
+      updateDynamicFields(destSel.value);
+    });
+  }
+
+  function tujuanVal() { return matchedDest || destSel.value; }
+
+  var tgl = $('#tanggal');
+  var now = new Date();
+  tgl.min = now.getFullYear() + '-' + String(now.getMonth() + 1).padStart(2, '0') + '-' + String(now.getDate()).padStart(2, '0');
+  tgl.addEventListener('change', function () {
+    var v = tgl.value;
+    if (!v) { $('#tanggalOut').textContent = ''; return; }
+    var p = v.split('-');
+    var hari = new Date(+p[0], +p[1] - 1, +p[2]).toLocaleDateString('en-GB', { weekday: 'long' });
+    $('#tanggalOut').textContent = hari + ', ' + p[2] + '-' + p[1] + '-' + p[0];
+  });
+
+  $('#tnStatus').addEventListener('change', function () {
+    var ada = this.value === 'Sudah ada', tidak = this.value === 'Tidak ada';
+    $('#tnIdBox').hidden = !ada;
+    $('#emailBox').hidden = !tidak;
+    $('#tnId').required = ada;
+    $('#email').required = tidak;
+  });
+
+  function flagImg(iso) {
+    var base = 'https://flagcdn.com/';
+    var l = iso.toLowerCase();
+    return '<img class="flag" alt="" width="20" height="15" loading="lazy" src="' + base + 'w20/' + l + '.png" srcset="' + base + 'w40/' + l + '.png 2x">';
+  }
+  var pickerSeq = 0;
+  function makePicker(host) {
+    var uid = 'cc' + (++pickerSeq);
+    var sel = COUNTRIES.filter(function (c) { return c[1] === 'AU'; })[0] || COUNTRIES[0], items = [], act = -1, change = null;
+    host.innerHTML =
+      '<button type="button" class="cc-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Country code"></button>' +
+      '<div class="cc-pop" hidden>' +
+        '<input type="search" class="cc-search" placeholder="Search country" aria-label="Search country" autocomplete="off">' +
+        '<ul class="cc-list" role="listbox" aria-label="Country list" id="' + uid + '-list"></ul>' +
+      '</div>';
+    var btn = host.querySelector('.cc-btn'), pop = host.querySelector('.cc-pop');
+    var search = host.querySelector('.cc-search'), list = host.querySelector('.cc-list');
+    var chevron = '<svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4.5l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+    function paintButton() { btn.innerHTML = flagImg(sel[1]) + '<span>+' + sel[2] + '</span>' + chevron; btn.setAttribute('aria-label', 'Country code: ' + sel[0] + ' +' + sel[2]); }
+    function mark() {
+      Array.prototype.forEach.call(list.children, function (li, i) { li.classList.toggle('active', i === act); });
+      var el = list.children[act];
+      if (el) { search.setAttribute('aria-activedescendant', el.id); el.scrollIntoView({ block: 'nearest' }); }
+      else search.removeAttribute('aria-activedescendant');
+    }
+    function render(filter) {
+      var q = String(filter || '').toLowerCase().replace(/^\+/, '').trim();
+      items = COUNTRIES.filter(function (c) { return !q || c[0].toLowerCase().indexOf(q) > -1 || c[2].indexOf(q) === 0 || c[1].toLowerCase() === q; });
+      if (!items.length) { list.innerHTML = '<li class="cc-empty" role="presentation">No country found</li>'; act = -1; mark(); return; }
+      list.innerHTML = items.map(function (c, i) {
+        return '<li role="option" id="' + uid + '-' + i + '" data-i="' + i + '" aria-selected="' + (c === sel) + '">' + flagImg(c[1]) +
+               '<span class="nm">' + c[0] + '</span><span class="dc">+' + c[2] + '</span></li>';
+      }).join('');
+      act = Math.max(0, items.indexOf(sel));
+      mark();
+    }
+    function open() {
+      pop.hidden = false; btn.setAttribute('aria-expanded', 'true');
+      search.value = ''; render('');
+      if (!window.matchMedia('(pointer: coarse)').matches) search.focus();
+    }
+    function close(refocus) {
+      pop.hidden = true; btn.setAttribute('aria-expanded', 'false');
+      if (refocus) btn.focus();
+    }
+    function choose(c) { sel = c; paintButton(); close(true); if (change) change(c); }
+
+    btn.addEventListener('click', function () { if (pop.hidden) open(); else close(false); });
+    btn.addEventListener('keydown', function (e) { if (e.key === 'ArrowDown' && pop.hidden) { e.preventDefault(); open(); } });
+    search.addEventListener('input', function () { render(search.value); });
+    search.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown') { e.preventDefault(); if (items.length) { act = Math.min(items.length - 1, act + 1); mark(); } }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); if (items.length) { act = Math.max(0, act - 1); mark(); } }
+      else if (e.key === 'Enter') { e.preventDefault(); if (items[act]) choose(items[act]); }
+      else if (e.key === 'Escape') { e.preventDefault(); close(true); }
+      else if (e.key === 'Tab') { close(false); }
+    });
+    list.addEventListener('click', function (e) {
+      var li = e.target.closest('li[data-i]');
+      if (li) choose(items[Number(li.dataset.i)]);
+    });
+    document.addEventListener('click', function (e) { if (!pop.hidden && !host.contains(e.target)) close(false); });
+    paintButton();
+    return { dial: function () { return sel[2]; }, onChange: function (fn) { change = fn; } };
+  }
+
+  function normPhone(cc, raw) {
+    raw = String(raw || '').trim();
+    var digits = raw.replace(/\D/g, '');
+    if (!digits) return { ok: false, msg: 'Enter a phone number.' };
+    if (raw.charAt(0) === '+') {
+      if (digits.indexOf(cc) !== 0) return { ok: false, msg: 'The country code in the number does not match the selected country.' };
+      digits = digits.slice(cc.length);
+    } else if (['62', '60', '61'].indexOf(cc) > -1 && digits.indexOf(cc) === 0) {
+      digits = digits.slice(cc.length);
+    }
+    digits = digits.replace(/^0+/, '');
+    if (cc === '62') {
+      if (!/^8\d{8,11}$/.test(digits)) return { ok: false, msg: 'Invalid Indonesian number. Example: 812 3456 7890.' };
+    } else if (!/^\d{6,12}$/.test(digits)) {
+      return { ok: false, msg: 'Invalid phone number.' };
+    }
+    if ((cc + digits).length > 15) return { ok: false, msg: 'The number is too long.' };
+    return { ok: true, full: cc + digits };
+  }
+  function bindPhone(hostId, inputId, outId) {
+    var picker = makePicker($('#' + hostId)), input = $('#' + inputId), out = $('#' + outId);
+    var base = out.textContent;
+    function update() {
+      if (!input.value.trim()) { input.setCustomValidity(''); out.textContent = base; return; }
+      var r = normPhone(picker.dial(), input.value);
+      input.setCustomValidity(r.ok ? '' : r.msg);
+      out.textContent = r.ok ? 'Saved as +' + r.full : r.msg;
+    }
+    picker.onChange(update);
+    input.addEventListener('input', update);
+    return picker;
+  }
+  var waPicker = bindPhone('waCc', 'wa', 'waOut');
+  var daruratPicker = bindPhone('daruratCc', 'daruratWa', 'daruratOut');
+
+  var files = {};
+  function bindFile(id) {
+    var input = $('#' + id), box = input.closest('.file');
+    input.addEventListener('change', function () {
+      var f = input.files && input.files[0];
+      input.setCustomValidity('');
+      box.classList.remove('bad');
+      files[id] = null;
+      $('#' + id + 'Thumb').style.backgroundImage = '';
+      if (!f) { $('#' + id + 'Name').textContent = 'Choose a photo or PDF'; $('#' + id + 'Hint').textContent = 'JPG, PNG, or PDF'; return; }
+      var isPdf = f.type === 'application/pdf', isImg = /^image\//.test(f.type);
+      var msg = '';
+      if (!isPdf && !isImg) msg = 'File must be an image or PDF.';
+      else if (isPdf && f.size > MAX_PDF) msg = 'PDF must be 4 MB or smaller.';
+      else if (isImg && f.size > MAX_IMG) msg = 'Image must be 15 MB or smaller.';
+      $('#' + id + 'Name').textContent = f.name;
+      if (msg) {
+        input.setCustomValidity(msg); box.classList.add('bad'); $('#' + id + 'Hint').textContent = msg;
+        input.value = '';
+        return;
+      }
+      files[id] = f;
+      $('#' + id + 'Hint').textContent = (f.size / 1024 / 1024).toFixed(1) + ' MB';
+      if (isImg) $('#' + id + 'Thumb').style.backgroundImage = 'url(' + URL.createObjectURL(f) + ')';
+      $('#' + id + 'Thumb').textContent = isImg ? '' : 'PDF';
+    });
+  }
+  bindFile('ktp'); bindFile('bukti');
+
+  $('#next1').addEventListener('click', function () {
+    var form = $('#f1');
+    if (!tujuanVal()) { destSel.setCustomValidity('Select a trip destination.'); } else { destSel.setCustomValidity(''); }
+    if (!files.ktp) { $('#ktp').setCustomValidity('Upload the participant passport.'); } else { $('#ktp').setCustomValidity(''); }
+    if (!form.reportValidity()) return;
+    go(2);
+  });
+  $('#next2').addEventListener('click', function () { go(3); });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-back]'), function (b) {
+    b.addEventListener('click', function () { go(Number(b.dataset.back)); });
+  });
+
+  function b64(file) {
+    return new Promise(function (res, rej) {
+      var r = new FileReader();
+      r.onload = function () { res(String(r.result).split(',')[1]); };
+      r.onerror = function () { rej(new Error('The file could not be read.')); };
+      r.readAsDataURL(file);
+    });
+  }
+  function loadImage(file) {
+    return new Promise(function (res, rej) {
+      var url = URL.createObjectURL(file), img = new Image();
+      img.onload = function () { URL.revokeObjectURL(url); res(img); };
+      img.onerror = function () { URL.revokeObjectURL(url); rej(new Error('The image could not be read. Try another photo or format.')); };
+      img.src = url;
+    });
+  }
+  function prepare(file) {
+    if (file.type === 'application/pdf') {
+      return b64(file).then(function (d) { return { name: file.name, mime: file.type, data: d }; });
+    }
+    return loadImage(file).then(function (img) {
+      var max = 1800, sc = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+      var c = document.createElement('canvas');
+      c.width = Math.round(img.naturalWidth * sc); c.height = Math.round(img.naturalHeight * sc);
+      var ctx = c.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, c.width, c.height);
+      ctx.drawImage(img, 0, 0, c.width, c.height);
+      return { name: file.name, mime: 'image/jpeg', data: c.toDataURL('image/jpeg', 0.85).split(',')[1] };
+    });
+  }
+  function send(payload) {
+    var ctrl = ('AbortController' in window) ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctrl) ctrl.abort(); }, 90000);
+    return fetch(API_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(payload),
+      signal: ctrl ? ctrl.signal : undefined
+    }).then(function (r) { clearTimeout(timer); return r.json(); });
+  }
+
+  function showErr(m) { var e = $('#err'); e.textContent = m; e.hidden = !m; }
+
+  $('#submit').addEventListener('click', function () {
+    showErr('');
+    if (!files.bukti) { showErr('Please upload your proof of payment first.'); return; }
+    if (!/^https:\/\/script\.google\.com\//.test(API_URL)) { showErr('The registration server address has not been set (API_URL in registration.html).'); return; }
+    var btn = this, back = $('#back3');
+    btn.disabled = true; back.disabled = true; btn.textContent = 'Sending...';
+    function reset() { btn.disabled = false; back.disabled = false; btn.textContent = 'Register for the Hike'; }
+
+    Promise.all([prepare(files.ktp), prepare(files.bukti)]).then(function (r) {
+      var v = function (id) { return $('#' + id).value.trim(); };
+      var payload = {
+        tujuan: tujuanVal(), tanggal: v('tanggal'), paket: v('paket'), tnStatus: v('tnStatus'), tnId: v('tnId'), email: v('email'),
+        meeting: v('meeting'), nama: v('nama'), tb: v('tb'), bb: v('bb'), waCc: waPicker.dial(), wa: v('wa'),
+        darurat: v('darurat'), daruratCc: daruratPicker.dial(), daruratWa: v('daruratWa'), website: v('website'),
+        ktp: r[0], bukti: r[1]
+      };
+      return send(payload).then(function (res) {
+        if (res && res.ok) { $('#rid').textContent = res.id; go(4); }
+        else { showErr((res && res.message) || 'Registration failed. Please try again.'); reset(); }
+      });
+    }).catch(function (e) {
+      var offline = e && (e.name === 'AbortError' || e instanceof TypeError || e instanceof SyntaxError);
+      showErr(offline ? 'Connection problem. Please check your internet and try again.' : (e.message || 'The file could not be processed.'));
+      reset();
+    });
+  });
+})();
+</script>
+</body>
+</html>

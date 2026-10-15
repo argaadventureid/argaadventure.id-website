@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+    <!-- Beranda (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/"/>
+    </url>
+
+    <!-- Prau (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-prau.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-prau-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-prau-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-prau-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-prau-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-prau-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-prau-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-prau-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-prau-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-prau.html"/>
+    </url>
+
+    <!-- Arjuno (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-arjuno.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-arjuno-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-arjuno-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-arjuno-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-arjuno-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-arjuno-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-arjuno-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-arjuno-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-arjuno-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-arjuno.html"/>
+    </url>
+
+    <!-- Lawu (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-lawu.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-lawu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-lawu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-lawu-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-lawu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-lawu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-lawu-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-lawu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-lawu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-lawu.html"/>
+    </url>
+
+    <!-- Merbabu (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-merbabu.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-merbabu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-merbabu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-merbabu-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-merbabu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-merbabu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-merbabu-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-merbabu-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-merbabu-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-merbabu.html"/>
+    </url>
+
+    <!-- Sindoro (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-sindoro.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sindoro-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sindoro-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-sindoro-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sindoro-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sindoro-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-sindoro-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sindoro-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sindoro-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sindoro.html"/>
+    </url>
+
+    <!-- Sumbing (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-sumbing.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sumbing-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sumbing-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-sumbing-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sumbing-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sumbing-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-sumbing-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-sumbing-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-sumbing-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-sumbing.html"/>
+    </url>
+
+    <!-- Slamet (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-gunung-slamet.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-slamet-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-slamet-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-gunung-slamet-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-slamet-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-slamet-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/mount-slamet-private-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-gunung-slamet-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/mount-slamet-private-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-gunung-slamet.html"/>
+    </url>
+
+    <!-- Ranu Kumbolo (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/private-trip-ranukumbolo.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-ranukumbolo-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/ranukumbolo-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/private-trip-ranukumbolo-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-ranukumbolo-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/ranukumbolo-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/ranukumbolo-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/private-trip-ranukumbolo-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/ranukumbolo-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/private-trip-ranukumbolo.html"/>
+    </url>
+
+    <!-- Annapurna Base Camp (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/trip-annapurna-base-camp.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-annapurna-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/annapurna-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/trip-annapurna-base-camp-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-annapurna-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/annapurna-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/annapurna-base-camp-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-annapurna-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/annapurna-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-annapurna-base-camp.html"/>
+    </url>
+
+    <!-- Everest Base Camp (id, ms, en) -->
+    <url>
+        <loc>https://argaadventure.id/trip-everest-base-camp.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-everest-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/everest-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/ms/trip-everest-base-camp-ms.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-everest-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/everest-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+    </url>
+    <url>
+        <loc>https://argaadventure.id/en/everest-base-camp-trip-en.html</loc>
+        <lastmod>2026-10-09</lastmod>
+        <xhtml:link rel="alternate" hreflang="id" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+        <xhtml:link rel="alternate" hreflang="ms" href="https://argaadventure.id/ms/trip-everest-base-camp-ms.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://argaadventure.id/en/everest-base-camp-trip-en.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://argaadventure.id/trip-everest-base-camp.html"/>
+    </url>
+
+</urlset>
