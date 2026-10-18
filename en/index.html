@@ -92,11 +92,8 @@
     .lang-btn:hover { opacity:1; transform:scale(1.08); }
     .lang-btn img { width:23px; height:17px; object-fit:cover; border-radius:3px; }
 
-    .nav-cta { display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px;
-      font-size:.83rem; font-weight:700; background:var(--g); color:#20180a; white-space:nowrap;
-      box-shadow:0 6px 20px -6px rgba(217,164,76,.7); transition:transform .2s, box-shadow .3s, background .25s; }
-    .nav-cta:hover { background:var(--g2); transform:translateY(-1px); }
-    @media (max-width:900px) { .nav-links { display:none; } }
+    /* On small screens only "Contact Us" stays visible in the navbar */
+    @media (max-width:900px) { .nav-links .nav-link:not(.nav-link-contact) { display:none; } }
 
     /* Anchor offset so section titles are not hidden by the fixed navbar */
     section[id] { scroll-margin-top:64px; }
@@ -132,7 +129,12 @@
     .hero-btn-ghost { background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.25);
       backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
     .hero-btn-ghost:hover { background:rgba(255,255,255,.18); transform:translateY(-2px); }
-    @media (prefers-reduced-motion:reduce) { .hero-bg, .hero-eyebrow .dot { animation:none; } .nav, .hero-btn { transition:none; } }
+    /* Hero text zoom-in effect on page load (heroZoomIn keyframes are defined below) */
+    .hero-zoom { transform-origin:center; animation:heroZoomIn 1s ease-out both; }
+    .hero-eyebrow.hero-zoom { animation-delay:.3s; }
+    .hero h1.hero-zoom { animation-delay:.6s; }
+    .hero p.hero-zoom { animation-delay:.9s; }
+    @media (prefers-reduced-motion:reduce) { .hero-bg, .hero-eyebrow .dot, .hero-zoom { animation:none; } .nav, .hero-btn { transition:none; } }
 
     /* Zoom-in animation is also used by other section titles (.reveal-zoom) */
     @keyframes heroZoomIn {
@@ -258,8 +260,7 @@
       .nav-right { gap:8px; }
       .lang-switcher { gap:6px; padding:4px 7px; }
       .lang-btn img { width:21px; height:15px; }
-      .nav-cta { padding:0; width:38px; height:38px; justify-content:center; }
-      .nav-cta span { display:none; }
+      .nav-link { padding:8px 10px; font-size:.8rem; }
       .hero { padding:120px 0 56px; }
       .hero-eyebrow { font-size:.62rem; letter-spacing:.2em; }
       .hero-btn { width:100%; max-width:320px; }
@@ -300,6 +301,7 @@
           <a class="nav-link" href="#services">Services</a>
           <a class="nav-link" href="#gunung">Destinations</a>
           <a class="nav-link" href="#how-it-works">How It Works</a>
+          <a class="nav-link nav-link-contact" href="#contact">Contact Us</a>
         </div>
         <!-- Language options: Indonesian (index.html) & Malaysian (/ms/) with flags -->
         <div class="lang-switcher">
@@ -310,10 +312,6 @@
             <img src="../images/flagms.jpg" alt="Malaysia Flag">
           </a>
         </div>
-        <a class="nav-cta" href="https://wa.me/628197922372?text=Hello%20Arga%20Adventure,%20I%20would%20like%20to%20plan%20a%20hiking%20trip." aria-label="Contact Us on WhatsApp">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm5.74 14.19c-.24.68-1.4 1.31-1.93 1.39-.49.07-1.11.11-3.59-.87-2.99-1.18-4.94-4.22-5.09-4.42-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.45.27-.29.59-.36.79-.36.2 0 .4 0 .58.01.19.01.44-.07.69.53.24.6.83 2.03.9 2.18.07.15.12.33.02.53-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.31-.13.61.18.3.8 1.32 1.71 2.14 1.18 1.05 2.17 1.38 2.47 1.53.3.15.48.13.66-.08.18-.21.78-.91.99-1.23.21-.32.42-.27.71-.16.29.11 1.83.86 2.14 1.02.31.16.52.24.6.37.08.13.08.75-.16 1.43z"/></svg>
-          <span>Contact Us</span>
-        </a>
       </div>
     </div>
   </nav>
@@ -322,9 +320,9 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="wrap">
-        <div class="hero-eyebrow"><span class="dot"></span>It's not just a hike — it's an experience</div>
-        <h1>See the World<br>from <em>Above the Clouds</em></h1>
-        <p>Explore the mountains of Indonesia and Nepal in small groups. Mountain treks designed around you, with safety and comfort at every step.</p>
+        <div class="hero-eyebrow hero-zoom"><span class="dot"></span>It's not just a hike — it's an experience</div>
+        <h1 class="hero-zoom">See the World<br>from <em>Above the Clouds</em></h1>
+        <p class="hero-zoom">Explore the mountains of Indonesia and Nepal in small groups. Mountain treks designed around you, with safety and comfort at every step.</p>
         <div class="hero-actions">
           <a class="hero-btn hero-btn-primary" href="#gunung">
             Explore Destinations
@@ -526,7 +524,7 @@
       </div>
     </section>
 
-    <section class="final">
+    <section class="final" id="contact">
       <div class="wrap">
         <div class="zoom-wrapper">
           <div class="eyebrow" style="color:#c4d7b9">Your Next Expedition</div>
