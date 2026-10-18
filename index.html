@@ -81,8 +81,6 @@
     .nav .wrap { display:flex; justify-content:space-between; align-items:center; gap:16px; }
     .brand { min-width:0; font-weight:700; letter-spacing:.02em; display:flex; align-items:center; gap:11px; font-size:1.02rem; }
     .brand img { height:40px; width:auto; object-fit:contain; filter:drop-shadow(0 2px 6px rgba(0,0,0,.4)); }
-    .brand-text { display:flex; flex-direction:column; line-height:1.05; }
-    .brand-text small { font-size:.6rem; letter-spacing:.28em; opacity:.62; font-weight:500; text-transform:uppercase; }
 
     .nav-right { display:flex; align-items:center; gap:14px; flex-shrink:0; }
     .nav-links { display:flex; gap:6px; align-items:center; }
@@ -97,11 +95,8 @@
     .lang-btn:hover { opacity:1; transform:scale(1.08); }
     .lang-btn img { width:23px; height:17px; object-fit:cover; border-radius:3px; }
 
-    .nav-cta { display:inline-flex; align-items:center; gap:8px; padding:10px 18px; border-radius:999px;
-      font-size:.83rem; font-weight:700; background:var(--g); color:#20180a; white-space:nowrap;
-      box-shadow:0 6px 20px -6px rgba(217,164,76,.7); transition:transform .2s, box-shadow .3s, background .25s; }
-    .nav-cta:hover { background:var(--g2); transform:translateY(-1px); }
-    @media (max-width:900px) { .nav-links { display:none; } }
+    /* Di layar kecil hanya "Hubungi Kami" yang tampil di navbar */
+    @media (max-width:900px) { .nav-links .nav-link:not(.nav-link-contact) { display:none; } }
 
     /* Offset anchor agar judul section tidak tertutup navbar fixed */
     section[id] { scroll-margin-top:64px; }
@@ -137,7 +132,12 @@
     .hero-btn-ghost { background:rgba(255,255,255,.08); color:#fff; border:1px solid rgba(255,255,255,.25);
       backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
     .hero-btn-ghost:hover { background:rgba(255,255,255,.18); transform:translateY(-2px); }
-    @media (prefers-reduced-motion:reduce) { .hero-bg, .hero-eyebrow .dot { animation:none; } .nav, .hero-btn { transition:none; } }
+    /* Efek zoom-in teks hero saat halaman dibuka (keyframes heroZoomIn ada di bawah) */
+    .hero-zoom { transform-origin:center; animation:heroZoomIn 1s ease-out both; }
+    .hero-eyebrow.hero-zoom { animation-delay:.3s; }
+    .hero h1.hero-zoom { animation-delay:.6s; }
+    .hero p.hero-zoom { animation-delay:.9s; }
+    @media (prefers-reduced-motion:reduce) { .hero-bg, .hero-eyebrow .dot, .hero-zoom { animation:none; } .nav, .hero-btn { transition:none; } }
 
     /* Animasi zoom-in dipakai juga oleh judul section lain (.reveal-zoom) */
     @keyframes heroZoomIn {
@@ -332,12 +332,10 @@
       .nav .wrap { width:calc(100% - 32px); gap:8px; }
       .brand { font-size:.85rem; gap:8px; white-space:nowrap; }
       .brand img { height:34px; }
-      .brand-text small { font-size:.52rem; }
       .nav-right { gap:8px; }
       .lang-switcher { gap:6px; padding:4px 7px; }
       .lang-btn img { width:21px; height:15px; }
-      .nav-cta { padding:0; width:38px; height:38px; justify-content:center; }
-      .nav-cta span { display:none; }
+      .nav-link { padding:8px 10px; font-size:.8rem; }
       .hero { padding:120px 0 56px; }
       .hero-eyebrow { font-size:.62rem; letter-spacing:.2em; }
       .hero-btn { width:100%; max-width:320px; }
@@ -369,6 +367,7 @@
           <a class="nav-link" href="#layanan">Layanan</a>
           <a class="nav-link" href="#gunung">Destinasi</a>
           <a class="nav-link" href="#cara">Cara Kerja</a>
+          <a class="nav-link nav-link-contact" href="#kontak">Hubungi Kami</a>
         </div>
         <!-- Pilihan Bahasa: Malaysia (/ms/) & Inggris (/en/) dengan bendera -->
         <div class="lang-switcher">
@@ -379,10 +378,6 @@
             <img src="/images/flagen.png" alt="Bendera Inggris">
           </a>
         </div>
-        <a class="nav-cta" href="https://wa.me/628197922372?text=Halo%20Arga%20Adventure%2C%20saya%20ingin%20merencanakan%20trip." aria-label="Hubungi Kami via WhatsApp">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91 0-5.46-4.45-9.91-9.91-9.91zm5.74 14.19c-.24.68-1.4 1.31-1.93 1.39-.49.07-1.11.11-3.59-.87-2.99-1.18-4.94-4.22-5.09-4.42-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.45.27-.29.59-.36.79-.36.2 0 .4 0 .58.01.19.01.44-.07.69.53.24.6.83 2.03.9 2.18.07.15.12.33.02.53-.1.2-.15.33-.3.51-.15.18-.32.4-.46.54-.15.15-.31.31-.13.61.18.3.8 1.32 1.71 2.14 1.18 1.05 2.17 1.38 2.47 1.53.3.15.48.13.66-.08.18-.21.78-.91.99-1.23.21-.32.42-.27.71-.16.29.11 1.83.86 2.14 1.02.31.16.52.24.6.37.08.13.08.75-.16 1.43z"/></svg>
-          <span>Hubungi Kami</span>
-        </a>
       </div>
     </div>
   </nav>
@@ -391,9 +386,9 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay"></div>
       <div class="wrap">
-        <div class="hero-eyebrow"><span class="dot"></span>It's not just a hike — it's an experience</div>
-        <h1>Lihat Dunia<br>dari <em>Atas Awan</em></h1>
-        <p>Jelajahi gunung-gunung Indonesia dan Nepal dalam kelompok kecil. Pendakian yang dirancang untukmu, dengan keselamatan dan kenyamanan di setiap langkah.</p>
+        <div class="hero-eyebrow hero-zoom"><span class="dot"></span>It's not just a hike — it's an experience</div>
+        <h1 class="hero-zoom">Lihat Dunia<br>dari <em>Atas Awan</em></h1>
+        <p class="hero-zoom">Jelajahi gunung-gunung Indonesia dan Nepal dalam kelompok kecil. Pendakian yang dirancang untukmu, dengan keselamatan dan kenyamanan di setiap langkah.</p>
         <div class="hero-actions">
           <a class="hero-btn hero-btn-primary" href="#gunung">
             Jelajahi Destinasi
@@ -570,7 +565,7 @@
       </div>
     </section>
 
-    <section class="final">
+    <section class="final" id="kontak">
       <div class="wrap">
         <div class="zoom-wrapper">
           <div class="eyebrow" style="color:#c4d7b9">Your next mountain story</div>
@@ -664,39 +659,42 @@
       });
 
       document.addEventListener("DOMContentLoaded", function () {
+          // Smooth scroll: tujuan dihitung ulang di setiap frame (aman walau halaman masih memuat / layout bergeser),
+          // dan progres animasi dibatasi 0-1 supaya frame yang terlambat tidak membuat halaman "meleset" ke atas.
           const internalLinks = document.querySelectorAll('a[href^="#"]');
+          let scrollRaf = null;
+          const stopScroll = () => { if (scrollRaf) { cancelAnimationFrame(scrollRaf); scrollRaf = null; } };
+          ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(ev => window.addEventListener(ev, stopScroll, { passive: true }));
+          const easeInOutQuad = t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+          const targetY = el => {
+              const max = document.documentElement.scrollHeight - window.innerHeight;
+              return Math.max(0, Math.min(el.getBoundingClientRect().top + window.pageYOffset, max));
+          };
           internalLinks.forEach(link => {
               link.addEventListener("click", function (e) {
+                  const href = this.getAttribute("href");
+                  const el = href.length > 1 ? document.querySelector(href) : null;
                   e.preventDefault();
-                  const targetId = this.getAttribute("href");
-                  const targetElement = document.querySelector(targetId);
-                  
-                  if (targetElement) {
-                      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                      const startPosition = window.pageYOffset;
-                      const distance = targetPosition - startPosition;
-                      let startTime = null;
-                      const duration = 900;
-
-                      function animation(currentTime) {
-                          if (startTime === null) startTime = currentTime;
-                          const timeElapsed = currentTime - startTime;
-                          const run = easeInOutQuad(timeElapsed, startPosition, distance, duration);
-                          window.scrollTo(0, run);
-                          if (timeElapsed < duration) {
-                              requestAnimationFrame(animation);
-                          }
-                      }
-
-                      function easeInOutQuad(t, b, c, d) {
-                          t /= d / 2;
-                          if (t < 1) return c / 2 * t * t + b;
-                          t--;
-                          return -c / 2 * (t * (t - 2) - 1) + b;
-                      }
-
-                      requestAnimationFrame(animation);
+                  if (!el) return;
+                  stopScroll();
+                  const startY = window.pageYOffset;
+                  const duration = 900;
+                  let startTime = null;
+                  function step(now) {
+                      if (startTime === null) startTime = now;
+                      const p = Math.min((now - startTime) / duration, 1);
+                      window.scrollTo(0, startY + (targetY(el) - startY) * easeInOutQuad(p));
+                      if (p < 1) { scrollRaf = requestAnimationFrame(step); return; }
+                      // Tahap akhir: tetap rapikan posisi sebentar jika layout masih bergeser
+                      let n = 0;
+                      const settle = () => {
+                          const g = targetY(el);
+                          if (Math.abs(window.pageYOffset - g) > 1) window.scrollTo(0, g);
+                          scrollRaf = (++n < 40) ? requestAnimationFrame(settle) : null;
+                      };
+                      scrollRaf = requestAnimationFrame(settle);
                   }
+                  scrollRaf = requestAnimationFrame(step);
               });
           });
 
